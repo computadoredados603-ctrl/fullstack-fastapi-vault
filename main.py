@@ -22,3 +22,10 @@ def add_ativo(nome: str = Form(...), categoria: str = Form(...), db: Session = D
     db.add(novo_ativo)
     db.commit()
     return RedirectResponse(url="/", status_code=303)
+@app.get("/delete/{ativo_id}")
+def delete_ativo(ativo_id: int, db: Session = Depends(get_db)):
+    ativo = db.query(models.Ativo).filter(models.Ativo.id == ativo_id).first()
+    if ativo:
+        db.delete(ativo)
+        db.commit()
+    return RedirectResponse(url="/", status_code=303)
