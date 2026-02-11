@@ -1,18 +1,22 @@
 # 🛡️ BullAssets - Full Stack Vault
 
-Sistema de gerenciamento de ativos desenvolvido com foco em **arquitetura limpa**, **agilidade** e **segurança**. O projeto une a robustez do Back-end em Python com a elegância de uma interface Dark Premium.
+Sistema de gerenciamento de ativos desenvolvido com **Python (FastAPI)** e **Tailwind CSS**. Este projeto foca em design premium, responsividade e, principalmente, na implementação de normas rigorosas de **segurança de dados**.
 
-## 🚀 Tecnologias Utilizadas
+## 🚀 Tecnologias e Agilidade
+Utilizei IA para acelerar o desenvolvimento de códigos repetitivos, permitindo focar 100% na **arquitetura do sistema** e na experiência do usuário.
 
-- **FastAPI**: Framework moderno de alta performance para Python.
-- **SQLAlchemy**: ORM para comunicação eficiente com banco de dados.
-- **SQLite**: Banco de dados relacional para persistência de ativos.
-- **Tailwind CSS**: Design responsivo e estilização premium.
-- **Jinja2**: Motor de renderização de templates HTML.
+- **Backend:** FastAPI (Python)
+- **Frontend:** HTML5 & Tailwind CSS
+- **Banco de Dados:** SQLAlchemy (SQLite)
 
-## 🛠️ Arquitetura e Produtividade
+## 🔒 Implementações de Segurança (Normas de Dados)
+Como parte do meu aprendizado contínuo na **Estácio**, este projeto foi blindado contra vulnerabilidades comuns:
 
-Este projeto foi construído utilizando metodologias ágeis de desenvolvimento. No processo, utilizei **Inteligência Artificial** como meu "Senior Reviewer" para:
-- Otimizar o tempo de digitação de códigos estruturais.
-- Focar 100% na arquitetura do sistema e lógica de negócio.
-- Acelerar a curva de aprendizado em estruturas complexas durante meus estudos na **Estácio**.
+* **Sanitização de Backend:** Implementação da biblioteca `Bleach` para limpar inputs e prevenir ataques de **XSS (Cross-Site Scripting)**.
+* **Validação de Frontend:** Uso de atributos `maxlength` e `pattern` (Regex) nos formulários para garantir a integridade dos dados enviados.
+* **Proteção de Arquivos:** Configuração estratégica de `.gitignore` para impedir o vazamento de bancos de dados (`.db`) e variáveis de ambiente (`.env`).
+* **Gestão de Dependências:** `requirements.txt` padronizado para garantir um ambiente de execução seguro e controlado.
+
+## 🛠️ Como rodar o projeto
+1. Instale as dependências: `pip install -r requirements.txt`
+2. Inicie o servidor: `uvicorn main:app --reload`
